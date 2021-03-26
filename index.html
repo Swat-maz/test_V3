@@ -30,25 +30,28 @@
     <div class="popup">
       <div class="popup_bg"></div>
       <div class="form">
-        <form class="form__body" action="">
+        <div class="popup__close">
+          <a href="javascript:clearPopup()"><img src="/img/Shape_7_copy_2.png" alt=""></a>
+        </div>
+        <form id="myform" class="form__body" action="">
           <h2>Обратная связь</h2>
           <div class="form__item">
             <label for="name">Ваше имя *</label>
-            <input type="text" placeholder="Поле обязательно для заполнения" required>
+            <input type="text" name="name"  minlength="2" required>
           </div>
           <div class="form__item">
-            <label for="name">Телефон *</label>
-            <input type="tel" placeholder="Поле обязательно для заполнения" required>
+            <label for="phone">Телефон *</label>
+            <input type="tel" pattern="[+][0-9]{12}" maxlength="13" minlength="13" name="phone" required>
           </div>
           <div class="form__item">
             <label for="name">Email *</label>
-            <input type="text" placeholder="Поле обязательно для заполнения" required>
+            <input type="email" autocomplete="on" placeholder=""  name="email" required>
           </div>
           <div class="form__item">
             <label for="name">Сообщение</label>
             <textarea name="massage" id="popup__massage" cols="30" rows="10"></textarea>
           </div>
-          <input id="send" type="submit" value="ОТПРАВИТЬ">
+          <input id="send" type="submit" value="ОТПРАВИТЬ" onclick="validateForm()">
         </form>
       </div>
     </div>
