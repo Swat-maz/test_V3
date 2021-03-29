@@ -11,7 +11,7 @@ $(document).ready(function() { // Ждём загрузки страницы
 		fade:true,
 		pauseOnFocus:false,
 		appendArrows:$('.buttons'),
-		// centerMode:true
+		centerMode: true,
 	});
 
 
